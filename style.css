@@ -1,0 +1,160 @@
+/* Gaya dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #070303;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(245, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #000000;
+    color: rgb(255, 31, 31);
+}
+
+.animated-text {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.animated-btn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.animated-btn:hover {
+    transform: scale(1.1);
+    background-color: #004080;
+}
+
+/* Fitur Cards */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pengaturan responsif */
+@media screen and (max-width: 768px) {
+    .feature-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* Menghapus garis bawah default pada link */
+a {
+    text-decoration: none;
+}
+
+/* Gaya tombol */
+.animated-btn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: rgb(231, 16, 16); /* Warna teks tombol */
+    background-color: #000000; /* Warna latar belakang tombol */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek hover pada tombol */
+.animated-btn:hover {
+    transform: scale(1.1);
+    background-color: #8d5151; /* Warna tombol saat hover */
+}
+
+/* Menjaga link tetap seperti tombol */
+.button-link {
+    display: inline-block;
+}
+
+h1{
+    color: #f00a0a;
+}
+
+button{
+    color: #f00a0a;
+    background-color: #000000;
+}
+audio {
+    display: none;
+  }
