@@ -1,123 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Canggih dengan Animasi</title>
-    <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tempat radit1ty | radit1ty</title>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+ <header>
+ <nav>
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo">RBX STORE
+      </div>
+    <ul>
+ <li><a href="#">Beranda</a></li>
+ <li><a href="#">Kategori</a></li>
+ <li><a href="keranjang.html">pengecekan item</a></li>
+ <li><a href="musik.html">Musik</a></li>
+ </ul>
 
-    <!-- Sidebar Menu -->
-    <div id="sidebar" class="sidebar">
-        <span class="close-btn" onclick="closeSidebar()">×</span>
-        <a href="https://raditya1ty.github.io/raditzto/">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="https://wa.me/082138555015">Contact</a>
-       <a href="https://sociabuzz.com/raditiahamzah/tribe">socialbuzz</a>
-        <p>versi 2.9</p>
-        <h1>jangan lupa follow</h1>
-        <audio id="audio" src="ssstik.io_1732530113718.mp3" preload="auto"></audio>
-        <div class="buttons">
-            <button id="playButton">Play</button>
-            <button id="pauseButton" disabled>Pause</button>
-        </div>
-        <audio id="audio" src="ssstik.io_1732530113718.mp3" preload="auto"></audio>
-        <div class="buttons">
-            <button id="playButton">Play</button>
-            <button id="pauseButton" disabled>Pause</button>
-        </div>
-        </div>
-
-        <div class="scrolling-text">
-            <p>السلام عليكم، مرحبا بكم في موقع راديت,assalamualaikum Selamat datang di web radit1ty</p>
-          </div>
-          
-          <section class="features">
-            <div class="feature-cards">
-                <div class="card">
-                    <h1>masuk ke saluranku guys</h1>
-                    <a href="https://whatsapp.com/channel/0029VasOLkcJJhzdg59S2C3o" target="_blank" class="button-link">
-                        <button class="animated-btn">Kunjungi Halaman</button>
-                    </a>
-                </div>
-                <div class="card">
-                    <h1>grup mabar,telpon,curhat,dan mabar cdid</h1>
-                    <a href="https://chat.whatsapp.com/L3k1McEqBxDFDnhFcKB5P9" target="_blank" class="button-link">
-                        <button class="animated-btn">Kunjungi Halaman</button>
-                    </a>
-                </div>
-                <div class="card">
-                    <h1>beli akun cdid,joki,dan robux</h1>
-                    <a href="https://belirbx.com/" target="_blank" class="button-link">
-                        <button class="animated-btn">Kunjungi Halaman</button>
-                    </a>
-                </div>
-                <div class="card">
-                    <h1>socialbuzz</h1>
-                    <a href="https://sociabuzz.com/raditiahamzah/tribe" target="_blank" class="button-link">
-                        <button class="animated-btn">Kunjungi Halaman</button>
-                    </a>
-                </div>
-
-             
-        <script src="script.js"></script>
-        <script>
-            // Ambil elemen-elemen dari DOM
-            const audio = document.getElementById('audio');
-            const playButton = document.getElementById('playButton');
-            const pauseButton = document.getElementById('pauseButton');
-          
-            // Fungsi untuk memulai audio
-            function playAudio() {
-                audio.play().then(() => {
-                    playButton.disabled = true;  // Disable tombol Play setelah audio mulai diputar
-                    pauseButton.disabled = false; // Enable tombol Pause setelah audio mulai diputar
-                }).catch((error) => {
-                    console.error("Error memutar audio:", error);
-                });
-            }
-          
-            // Fungsi untuk menjeda audio
-            function pauseAudio() {
-                audio.pause();
-                playButton.disabled = false; // Enable tombol Play setelah audio dijeda
-                pauseButton.disabled = true; // Disable tombol Pause setelah audio dijeda
-            }
-          
-            // Event listeners untuk tombol Play dan Pause
-            playButton.addEventListener('click', playAudio);
-            pauseButton.addEventListener('click', pauseAudio);
-          
-          
-          
-                  const audioPlayer = document.getElementById('audioPlayer');
-                  const playPauseButton = document.getElementById('playPauseButton');
-                  const trackSelect = document.getElementById('trackSelect');
-          
-                  // Fungsi untuk memutar atau menjeda musik
-                  playPauseButton.addEventListener('click', () => {
-                      if (audioPlayer.paused) {
-                          audioPlayer.play();
-                          playPauseButton.textContent = 'Pause';
-                      } else {
-                          audioPlayer.pause();
-                          playPauseButton.textContent = 'Play';
-                      }
-                  });
-          
-                  // Fungsi untuk mengganti lagu saat pilihan berubah
-                  trackSelect.addEventListener('change', (event) => {
-                      audioPlayer.src = event.target.value;
-                      audioPlayer.play();
-                      playPauseButton.textContent = 'Pause';
-                  });
-              </script>
-            
-          </script>
+</nav>
+<div class="container">
+  <div class="scrolling-text">
+    السلام عليكم، مرحبا بكم في موقع راديت,assalamualaikum Selamat datang di tempat berada website radit1ty selamat membeli
+  </div>
+</div>
 
 
+<div class="menu-toggle" id="menu-toggle">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+<audio id="audio-player" preload="auto">
+  <source src="naml 29-30.mp3" type="audio/mp3"> <!-- Ganti dengan file lagu yang Anda miliki -->
+</audio>
+<div class="controls">
+  <button id="play-btn" class="control-btn">Play</button>
+  <button id="pause-btn" class="control-btn" style="display: none;">Pause</button>
+  <div class="progress-container">
+    <input type="range" id="progress" value="0" max="100">
+  </div>
+</div>
+
+ </header>
+
+
+ <div class="container">
+  <a href="topup ff.html" class="tombol-gambar">
+    <img src="ff.jpg" alt="Gambar">
+    <h3>Free fire Max & Biasa</h3>
+  </a>
+</div>
+
+<div class="container">
+  <a href="topup ff.html" class="tombol-gambar">
+    <img src="8262c350-9a30-42bf-bc05-6bba2ed102fc.jpg" alt="Gambar">
+    <h3>Jasa joki web desain</h3>
+  </a>
+</div>
+
+
+<div class="container">
+  <a href="https://isnahamzah.tech/" class="tombol-gambar">
+    <img src="copy_of_copy_of_copy_of_copy_of_zee__2_-removebg-preview-mp8vxekRwZuXgq8N.avif" alt="Gambar">
+    <h3>Script game roblox semua ada</h3>
+  </a>
+</div>
+
+
+<div class="container">
+  <a href="webdesain.html" class="tombol-gambar">
+    <img src="logo desain.jpg" alt="Gambar">
+    <h3>Jasa joki web topup</h3>
+  </a>
+</div>
+
+
+<div class="container">
+  <a href="https://www.liputan6.com/tag/palestina" class="tombol-gambar">
+    <img src="palistina.jpg" alt="Gambar">
+    <h3>Berita palestine</h3>
+  </a>
+</div>
+
+
+
+<div class="container">
+  <a href="https://sociabuzz.com/raditiahamzah" class="tombol-gambar">
+    <img src="bg donate.png" alt="Gambar">
+    <h3>Bg donate pliss</h3>
+  </a>
+</div>
+
+
+ <main>
+ <!-- Konten utama -->
+ </main>
+ <script src="script.js"></script>
 </body>
 </html>

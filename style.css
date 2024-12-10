@@ -1,134 +1,52 @@
-/* Gaya sidebar */
-body{
-    background-image: url(wallpapersden.com_blue-background-geometric-abstract_1920x1080.jpg);
-}
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #0000005e;
-    overflow-x: hidden;
-    transition: width 0.5s; /* Transisi width untuk efek geser */
-    padding-top: 60px;
-    z-index: 1000; /* Pastikan di atas konten lain */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+  background-color: rgb(248, 255, 255);
+    margin: 0;
+    padding: 0;
 }
 
-/* Gaya untuk link di dalam sidebar */
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
     display: block;
-    transition: 0.3s;
+    margin: 10px 0 5px;
 }
 
-/* Gaya saat link di-hover */
-.sidebar a:hover {
-    background-color: #0fc799;
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Tombol close di sidebar */
-.sidebar .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Gaya tombol untuk membuka sidebar */
-.open-btn {
-    font-size: 20px;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: #12993463;
-    padding: 10px 15px;
-    border: none;
-}
-
-/* Menata elemen pembungkus */
-.scrolling-text {
-    width: 100%; /* Lebar penuh */
-    overflow: hidden; /* Menyembunyikan teks yang melampaui batas */
-    background-color: #a7292900; /* Warna latar belakang */
-    padding: 20px 0; /* Memberikan padding agar teks tidak terlalu dekat dengan tepi */
-  }
-  
-  .scrolling-text p {
-    display: inline-block; /* Menjadikan teks berjalan dalam satu baris */
-    white-space: nowrap; /* Mencegah teks terpotong menjadi beberapa baris */
-    color: rgb(9, 221, 193);
-    font-size: 40px; /* Ukuran font lebih besar */
-    font-weight: bold; /* Menebalkan teks */
+button {
+    width: 100%;
     padding: 10px;
-    animation: scroll 10s linear infinite; /* Menambahkan animasi */
-  }
-  
-  /* Animasi untuk menggeser teks */
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%); /* Mulai dari luar layar di kanan */
-    }
-    100% {
-      transform: translateX(-100%); /* Pergi keluar layar di kiri */
-    }
-  }
-  
-  .animated-btn {
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
-    background-color: #0057b356;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 30px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.animated-btn:hover {
-    transform: scale(1.1);
-    background-color: #4789ca;
-}
-h1{
-    color: aqua;
-    padding: 10px;
-}
-button{
-    
-    background-color: #3498db;
+    background-color: #16921a;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 4px;
     font-size: 16px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-/* Play/Pause button */
-#play-pause-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-/* Efek Fade-in */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 3s ease-in forwards;
+button:hover {
+    background-color: #0ff11a;
 }
 
-@keyframes fadeIn{
-    to {
-        opacity: 1;
-    }
+#responseMessage {
+    text-align: center;
+    margin-top: 20px;
 }
